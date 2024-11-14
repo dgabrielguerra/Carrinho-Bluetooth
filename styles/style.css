@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Oswald:wght@200..700&display=swap');
+
+:root {
+    --cor-principal: #64dfef; /* Azul */
+    --cor-cabeçalho: #222222;
+}
+  
+
+*{
+    font-family: "Arima",sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/*******************************CABEÇALHO************************************/
+
+header{
+     display: flex;
+     align-items: center;
+     text-align: center;
+     justify-content: space-between;
+     background-color: var(--cor-cabeçalho);
+     padding: 5px;
+}
+.navegador{
+    justify-content:space-around;
+    padding-right: 60px;
+}
+.navegador a{
+    padding: 20px;
+    text-decoration: none;
+    color: var(--cor-principal);
+    padding-right: 50px;
+
+}
+/*******************************CABEÇALHO FINAL ************************************/
+
+
+/*******************************MAIN ************************************/
+
+
+.welcome{
+    display: block;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
+
+/***MOTIVACAO***/
+.motivacao{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 700px;
+    height: 500px;
+    padding: 10px;  
+}
+.textoMotivacao{
+    text-align: justify;
+    padding: 10px;
+}
+.imgMotivacao{
+    padding: 10px;
+}
+
+/*******************************MAIN FINAL ************************************/
+
+
+
+
+
+
+
+
+/*******************************RODAPÉ************************************/
+footer{
+    background-color: var(--cor-cabeçalho);
+    
+}
+
+
+
+
+/*******************************RODAPÉ FINAL************************************/
+
+.video_you{
+    text-align: center;
+    margin: auto;
+    padding: 80px;
+    height: 380px;
+    box-shadow: 0px 10px 14px grey;
+    
+}
+.pro{
+    display: flex;
+    justify-content: space-between;
+}
+.proble{
+    margin: 25px;
+
+}
+.partedecima{
+    display: flex;
+    background-color: #FFC803;
+}
+.imagens img{
+   display: block;
+   margin: 0px;
+   padding: 25px;
+}
