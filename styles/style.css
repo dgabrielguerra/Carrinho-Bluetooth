@@ -108,14 +108,15 @@ footer{
    display: block;
    margin: 0px;
    padding: 25px;
+   
 }
 
 .carrosel{
-    box-shadow: 4px 4px 8px grey;
+    box-shadow: 2px 2px 4px black;
     overflow: hidden;
     height: 650px;
-    width: 500px;
-    
+    width: 475px;
+    border-radius: 15px ;
     
 }
 .container{
@@ -132,4 +133,52 @@ footer{
     justify-content: center; 
     align-items: center;   
     height: 100vh;        
+}
+
+#inf h1, h2  {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin: 0;
+    text-align: top;
+  }
+#inf {
+    display: flex;
+    transition: transform 0.5s ease-in-out; 
+    width: 2000px; 
+}
+
+.informacoes {
+    width: 500px;
+    height: 650px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; 
+    box-sizing: border-box; 
+    text-align: center;
+}
+
+.informacoes h2 {
+    font-size: 24px;
+    margin-bottom: 10px; 
+}
+
+.informacoes p {
+    font-size: 16px;
+    color: #545353; 
+}
+
+.teste{
+       background-color: rgb(91, 189, 189);
+}
+.container{
+ background-color: #FFC803;
+}
+#inf a{
+    text-decoration: none;
+
 }
