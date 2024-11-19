@@ -186,3 +186,25 @@ footer{
     text-decoration: none;
 
 }
+
+.primeiraPt{
+    display: flex;
+    justify-content: space-between;
+}
+
+.comp{
+    margin : 100px;
+}
+
+.apps{
+    margin: 100px;
+
+
+}
+
+.montagem{
+    display: block;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
