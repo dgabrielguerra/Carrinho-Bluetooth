@@ -49,19 +49,23 @@ header{
 
 /***MOTIVACAO***/
 .motivacao{
-    display: flex;
+    display: block;
     align-items: center;
-    justify-content: space-evenly;
-    width: 700px;
-    height: 500px;
-    padding: 10px;  
+    text-align: center;
+    padding: 30px;  
 }
 .textoMotivacao{
-    text-align: justify;
-    padding: 10px;
+    display: block;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
 }
 .imgMotivacao{
-    padding: 10px;
+    display: block;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    margin-left: 100px;
 }
 
 /*******************************MAIN FINAL ************************************/
