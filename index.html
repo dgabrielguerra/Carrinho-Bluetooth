@@ -56,6 +56,177 @@
                     <img src="/imagens/componente.webp" alt="" width="700px">
                 </div>
 
+                <div class = "codigoArduino">
+                    <h3>Codigo do Arduino</h3>
+                    <code>#include SoftwareSerial.h
+                       </br>
+                        SoftwareSerial bluetooth(2, 3);
+                       </br>   
+                        int IN1 = 7;
+                       </br>
+                        int IN2 = 6;
+                       </br>
+                        int IN3 = 5;
+                       </br>
+                        int IN4 = 4;
+                       </br>
+                        int PWML = 9;
+                       </br>
+                        int PWMR = 10;
+                       </br>
+                        char comando;
+                       </br>
+                         
+                        void setup() {
+                        </br>
+                          //Define os pinos como saida
+                        </br>
+                          Serial.begin(9600);
+                        </br>
+                          pinMode(IN1, OUTPUT);
+                        </br> 
+                          pinMode(IN2, OUTPUT);
+                        </br>
+                          pinMode(IN3, OUTPUT);
+                        </br>
+                          pinMode(IN4, OUTPUT);
+                        </br>
+                          pinMode(PWML, OUTPUT);
+                        </br>
+                          pinMode(PWMR, OUTPUT);
+                        </br>
+                        }
+                    </br>
+                         
+                        void loop() {
+                        </br>
+                        
+                          while (Serial.available()) {
+                        </br>
+                            
+                            comando = Serial.read();
+                        </br>
+                            if (comando == 'F') {
+                            </br>
+                              frente();
+                            </br>
+                            }
+                        </br>
+                            else if (comando == 'B') {
+                            </br>
+                              tras();
+                            </br>
+                            }
+                        </br>
+                            else if (comando == 'L') {
+                            </br>
+                              esquerda();
+                            </br>
+                            }
+                        </br>
+                            else if (comando == 'R') {
+                            </br>
+                              direita();
+                            </br>
+                            }
+                        </br>
+                            else {
+                            </br>
+                              parado();
+                            </br>
+                            }
+                        </br>
+                          }
+                        </br>
+                        }
+                    </br>
+                         
+                        void tras() {
+                        </br>
+                          //Gira o Motor A e B no sentido horario
+                        </br>
+                          analogWrite(PWML, 180);
+                        </br>
+                          analogWrite(PWMR, 180);
+                        </br>
+                          digitalWrite(IN1, LOW);
+                        </br>
+                          digitalWrite(IN2, HIGH);
+                        </br>
+                          digitalWrite(IN3, LOW);
+                        </br>
+                          digitalWrite(IN4, HIGH);
+                        </br>
+                        
+                        }
+                    </br>
+                         
+                        void frente() {
+                        </br>
+                          //Gira o Motor A e B no sentido anti-horario
+                        </br>
+                          analogWrite(PWML, 180);
+                        </br>
+                          analogWrite(PWMR, 180);
+                        </br>
+                          digitalWrite(IN1, HIGH);
+                        </br>
+                          digitalWrite(IN2, LOW);
+                        </br>
+                          digitalWrite(IN3, HIGH);
+                        </br>
+                          digitalWrite(IN4, LOW);
+                        </br>
+                        }
+                    </br>
+                         
+                        void esquerda() {
+                        </br>
+                          analogWrite(PWML, 180);
+                        </br>
+                          analogWrite(PWMR, 180);
+                        </br>
+                          digitalWrite(IN1, LOW);
+                        </br>
+                          digitalWrite(IN2, HIGH);
+                        </br>
+                          digitalWrite(IN3, HIGH);
+                        </br>
+                          digitalWrite(IN4, LOW);
+                        </br>
+                        }
+                    </br>
+                         
+                        void direita() {
+                        </br>
+                          analogWrite(PWML, 180);
+                        </br>
+                          analogWrite(PWMR, 180);
+                        </br>
+                          digitalWrite(IN1, HIGH);
+                        </br>
+                          digitalWrite(IN2, LOW);
+                        </br>
+                          digitalWrite(IN3, LOW);
+                        </br>
+                          digitalWrite(IN4, HIGH);
+                        </br>
+                        }
+                    </br>
+                        void parado() {
+                        </br>
+                          digitalWrite(IN1, LOW);
+                        </br>
+                          digitalWrite(IN2, LOW);
+                        </br>
+                          digitalWrite(IN3, LOW);
+                        </br>
+                          digitalWrite(IN4, LOW);
+                        </br>
+                        }</code>
+
+                </div>
+
             </article>
 
         </div>
