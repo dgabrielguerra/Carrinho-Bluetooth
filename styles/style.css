@@ -67,6 +67,11 @@ header{
     padding: 30px;
     margin-left: 100px;
 }
+.palavrasChave{
+    display: block;
+    align-items: center;
+    text-align: center;
+}
 
 
 /*******************************MAIN FINAL ************************************/
