@@ -73,13 +73,12 @@
                 3. Posicione os componentes eletrônicos, passando a fiação por dentros dos furos do chassi;
                 <br />
                 <img src = "imagens/proto ponte modulo.jpg" alt="" width="400px" height="200px" />
+                <br />
                 4. Aperte os parafusos;
                 <br />
                 <img src = "imagens/proto ponte.jpg" alt="" width="400px" height="200px" />
                 <br />
                 5. Finalmente, encaixe a carroceria de sua escolha.
-                <br />
-                <img src = "/imagens/carrinho-controle-remoto-bluetooth-3.png.webp" alt="" width="400px" height="200px" />
                 <br />
                 <img src = "/imagens/mcqueen.jpg" alt="" width="400px" height="200px" />
                 <br />
@@ -99,58 +98,112 @@
                 <br />
 
             <h2> Principais trechos do código </h2>
+          <br />  
+          <section class = "segundaPt">
+              <div class = "codigo1">
                 <br />
                 void loop() {
                 <br />
                     while (Serial.available()) {
                 <br />     
                       comando = Serial.read();
+                      <br />
                       if (comando == 'F') {
                         frente();
+                      <br />
                       }
+                      <br />
                       else if (comando == 'B') {
                         tras();
+                      <br />
                       }
+                      <br />
                       else if (comando == 'L') {
                         esquerda();
+                      <br />
                       }
+                      <br />
                       else if (comando == 'R') {
                         direita();
+                        <br />
                       }
+                      <br />
                       else {
                         parado();
                       }
+                      <br />
                     }
+                    <br />
                   }
-                <br />
-                Serial.available(): Verifica se há dados disponíveis para leitura.
-                Serial.read(): Lê o dado recebido (um caractere).
-                O caractere determina qual função será chamada:
-                'F': Move para frente.
-                'B': Move para trás.
-                'L': Vira à esquerda.
-                'R': Vira à direita.
-                Qualquer outro comando: Para o robô.
-                <br />
+                  <br />
+                </div>
+
+                <div class = "explicacaoCodigo1"
+
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  Serial.available(): Verifica se há dados disponíveis para leitura.
+                  <br />
+                  Serial.read(): Lê o dado recebido (um caractere).
+                  <br />
+                  O caractere determina qual função será chamada:
+                  <br />
+                  'F': Move para frente.
+                  <br />
+                  'B': Move para trás.
+                  <br />
+                  'L': Vira à esquerda.
+                  <br />
+                  'R': Vira à direita.
+                  <br />
+                  Qualquer outro comando: Para o robô.
+                
+                
+                </div>
+
+          </section>
+          <br />
+          <br />
+          <section class = "terceiraPt">
+                
+                <div class = "codigo2">
                 void tras() {
+                  <br />
                     analogWrite(PWML, 180);
+                    <br />
                     analogWrite(PWMR, 180);
+                    <br />
                     digitalWrite(IN1, LOW);
+                    <br />
                     digitalWrite(IN2, HIGH);
+                    <br />
                     digitalWrite(IN3, LOW);
+                    <br />
                     digitalWrite(IN4, HIGH);
+                    <br />
                   }
-                <br />
+                </div>  
+
+                <div class ="explicacaoCodigo2">
+                  <br />
                 Define velocidade PWM como 180 (cerca de 70% da potência máxima).
+                <br />
                 Configura os pinos para girar ambos os motores no sentido horário (movimento para trás).
                 <br />
                 <br />
-                <a href="https://github.com/dgabrielguerra/Carrinho-Bluetooth"> Repositório no GitHub ></a>
+                
+                </div>
+            </section>
+            
+          <a href="https://github.com/dgabrielguerra/Carrinho-Bluetooth"> Repositório no GitHub -></a>
                 <br />
                 <br />
                 <input class="styled" type="button" value="Add to favorites" />
 
-        </div>
+        
  
 
     

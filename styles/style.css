@@ -198,6 +198,29 @@ footer{
     justify-content: space-between;
 }
 
+.segundaPt{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 20px;
+}
+
+.terceiraPt{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 20px;
+}
+.codigo2{
+    margin-right: 70px;
+}
+
+
+
+
+
 .comp{
     margin : 100px;
 }
@@ -214,6 +237,13 @@ footer{
 }
 
 .montagem{
+    display: block;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.codigo{
     display: block;
     align-items: center;
     text-align: center;
