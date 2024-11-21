@@ -108,6 +108,8 @@ footer{
 }
 .proble{
     margin: 25px;
+    text-align: center;
+    
 
 }
 .partedecima{
@@ -251,3 +253,6 @@ footer{
       inset 2px 2px 3px rgb(0 0 0 / 60%);
   }
   
+body{
+    background-color: yellow;
+}
