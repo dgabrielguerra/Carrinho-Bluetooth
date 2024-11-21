@@ -64,15 +64,18 @@
                 <br />
                 1. Encaixe os motores e em seguida as rodas no chassi;
                 <br />
+                <img src = "imagens/rodas e motores.jpg" alt="" width="400px" height="200px" />
+                <br />
                 2. Encaixe o conector para as pilhas;
                 <br />
-                <img src = "imagens/carrinho-controle-remoto-bluetooth-1.png.webp" alt="" width="400px" height="200px" />
+                <img src = "imagens/conector pilhas.jpg" alt="" width="400px" height="200px" />
                 <br />
                 3. Posicione os componentes eletrônicos, passando a fiação por dentros dos furos do chassi;
                 <br />
+                <img src = "imagens/proto ponte modulo.jpg" alt="" width="400px" height="200px" />
                 4. Aperte os parafusos;
                 <br />
-                <img src = "imagens/carrinho-controle-remoto-bluetooth-2.png.webp" alt="" width="400px" height="200px" />
+                <img src = "imagens/proto ponte.jpg" alt="" width="400px" height="200px" />
                 <br />
                 5. Finalmente, encaixe a carroceria de sua escolha.
                 <br />
@@ -93,6 +96,60 @@
                 <br />
                 <img src = "imagens/controle.png" alt="" width="400px" height="200px" />
                 <br />
+                <br />
+
+            <h2> Principais trechos do código </h2>
+                <br />
+                void loop() {
+                <br />
+                    while (Serial.available()) {
+                <br />     
+                      comando = Serial.read();
+                      if (comando == 'F') {
+                        frente();
+                      }
+                      else if (comando == 'B') {
+                        tras();
+                      }
+                      else if (comando == 'L') {
+                        esquerda();
+                      }
+                      else if (comando == 'R') {
+                        direita();
+                      }
+                      else {
+                        parado();
+                      }
+                    }
+                  }
+                <br />
+                Serial.available(): Verifica se há dados disponíveis para leitura.
+                Serial.read(): Lê o dado recebido (um caractere).
+                O caractere determina qual função será chamada:
+                'F': Move para frente.
+                'B': Move para trás.
+                'L': Vira à esquerda.
+                'R': Vira à direita.
+                Qualquer outro comando: Para o robô.
+                <br />
+                void tras() {
+                    analogWrite(PWML, 180);
+                    analogWrite(PWMR, 180);
+                    digitalWrite(IN1, LOW);
+                    digitalWrite(IN2, HIGH);
+                    digitalWrite(IN3, LOW);
+                    digitalWrite(IN4, HIGH);
+                  }
+                <br />
+                Define velocidade PWM como 180 (cerca de 70% da potência máxima).
+                Configura os pinos para girar ambos os motores no sentido horário (movimento para trás).
+                <br />
+                <br />
+                <a href="https://github.com/dgabrielguerra/Carrinho-Bluetooth"> Repositório no GitHub ></a>
+                <br />
+                <br />
+                <input class="styled" type="button" value="Add to favorites" />
+
         </div>
  
 
